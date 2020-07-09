@@ -143,7 +143,6 @@ jobs:
           # 常用LuCI插件选择:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-adguardhome=y 
-          CONFIG_PACKAGE_luci-app-advancedsetting=y
           CONFIG_PACKAGE_luci-app-netdata=y
           CONFIG_PACKAGE_luci-app-passwall=y
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ipt2socks=y
@@ -160,18 +159,16 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-          CONFIG_PACKAGE_luci-app-vssr=y
-          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_V2ray=y
-          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan=y
-          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Socks=y
           CONFIG_PACKAGE_luci-app-webadmin=y
           EOF
 
           # LuCI主题:
-          # cat >> .config <<EOF
-          # CONFIG_PACKAGE_luci-theme-argon=y
-          # CONFIG_PACKAGE_luci-theme-netgear=y
-          # EOF
+          cat >> .config <<EOF
+          CONFIG_PACKAGE_luci-theme-argon_new=y
+          CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_luci-theme-ifit
+          CONFIG_PACKAGE_luci-theme-atmaterial
+          EOF
 
           # 常用软件包:
           # cat >> .config <<EOF
@@ -187,6 +184,7 @@ jobs:
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           cat >> .config <<EOF
           # CONFIG_PACKAGE_luci-app-zerotier is not set
+          # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
           EOF
 
           # 
