@@ -166,8 +166,8 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon_new=y
           CONFIG_PACKAGE_luci-theme-netgear=y
-          CONFIG_PACKAGE_luci-theme-ifit
-          CONFIG_PACKAGE_luci-theme-atmaterial
+          CONFIG_PACKAGE_luci-theme-ifit=y
+          CONFIG_PACKAGE_luci-theme-atmaterial=y
           EOF
 
           # 常用软件包:
